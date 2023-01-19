@@ -7,3 +7,5 @@ Request:
 - Position (student, teacher, president, etc.)
 
 The "List" container changes its height automatically.
+
+**To view the page open the index.html**
