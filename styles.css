@@ -1,0 +1,135 @@
+
+* {
+    margin: 0; /* para que no haya margen en el body */
+    padding: 0; /* para que no haya margen en el body */
+    box-sizing: border-box; /* para que no haya margen en el body */
+}
+
+body {
+    background-color: #F6F0CF; /* color del fondo */
+}
+
+.div-titulo {
+    width: 100%; /* ancho del titulo */
+    height: 100px; /* altura del titulo */
+    display: flex; /* para que el titulo se centre */
+    justify-content: center; /* aara que el titulo se centre */
+    align-items: center; /* para que el titulo se centre */
+}
+
+.div-titulo h1 {
+    font-weight: 300; /* 300 de grosor */
+}
+
+.contenedor {
+    width: 100%; /* ancho del contenedor */
+    height: calc(100vh - 100px); /* altura del contenedor */
+    display: flex; /* para que el contenedor se centre */
+    justify-content: center; /* para que el contenedor se centre */
+}
+
+/* estilos del formulario */
+.contenedor .div-formulario {
+    width: 30%; /* ancho del div-contenedor */
+    height: 250px; /* altura del div-contenedor */
+    margin: 15px 15px; /* 15px de margen superior e inferior y 15px de margen izquierdo y derecho */
+    background-color: #F8E470; /* color del div-contenedor */
+    display: flex; /* para que el div-contenedor se centre */
+    flex-direction: column; /* se coloca en columnas */
+    justify-content: center; /* para que el div-contenedor se centre */
+    align-items: center; /* formulario se centre */
+    border-radius: 10px; /* se le da un borde redondeado */
+    /*box-shadow: 10px 10px 10px #000000; /* se le da una sombra */
+    /*box-shadow: 10px 10px rgba(0, 0, 0, 0.3); /* se le da una sombra */
+
+}
+
+.contenedor .div-formulario h2 {
+    margin-top: 10px; /* 10px de margen superior */
+    font-weight: 300; /* 300 de grosor */
+    font-size: 2em; /* 2em de tamaño de fuente*/
+    color: #000000; /* color de "Form" */
+}
+
+.contenedor .div-formulario form {
+    width: 100%; /* ancho del formulario */
+    height: 100%; /* altura del formulario */
+    display: flex; /* para que el formulario se centre */
+    flex-direction: column; /* se coloca en columnas */
+    justify-content: center; /* para que el formulario se centre */
+    align-items: center; /* formulario se centre */
+}
+
+.contenedor .div-formulario form input,
+.contenedor .div-formulario form button {
+    width: 80%; /* ancho del input y del boton */
+    padding: 10px 10px; /* 10px de padding superior e inferior y 10px de padding izquierdo y derecho */
+    margin: 10px 10px; /* 10px de margen superior e inferior y 10px de margen izquierdo y derecho */
+    /* height: 40px; /* altura del input y del boton */
+    /* margin-top: 10px; /* 10px de margen superior */
+    border-radius: 10px; /* se le da un borde redondeado */
+    border: none; /* se le quita el borde */
+    /* outline: none; /* se le quita el borde */
+}
+
+
+/* estilos del listado */
+.contenedor .div-listado {
+    width: 55%; /* ancho del div-listado */
+    height: calc(100% - 100px); /* altura del div-listado */
+    margin: 15px 15px; /* 15px de margen superior e inferior y 15px de margen izquierdo y derecho */
+    background-color: #F8E470; /* color del div-listado */
+    display: flex; /* para que el div-listado se centre */
+    flex-direction: column; /* se coloca en columnas */
+    align-items: center; /* para que el div-listado se centre */
+    border-radius: 10px; /* se le da un borde redondeado */
+    /*box-shadow: 10px 10px 10px #000000; /* se le da una sombra */
+}
+
+.contenedor .div-listado h2 {
+    margin-top: 10px; /* 10px de margen superior */
+    font-weight: 300; /* 300 de grosor */
+    font-size: 2em; /* 2em de tamaño */
+    color: #000000; /* color de "LIST" */
+}
+
+.contenedor .div-listado .div-lista {
+    width: 100%; /* ancho del div-lista */
+    height: 100%; /* altura del div-lista */
+    display: flex; /* para que el div-lista se centre */
+    flex-direction: column; /* se coloca en columnas */
+    align-items: center; /* formulario se centre */
+    margin: 15px; /* 15px de margen superior e inferior y 15px de margen izquierdo y derecho */
+    padding: 0 30px; /* 0 de padding superior e inferior y 30px de padding izquierdo y derecho */
+    /*border-radius: 10px; /* se le da un borde redondeado */
+    /*box-shadow: 10px 10px 10px #000000; /* se le da una sombra */
+}
+
+.contenedor .div-listado .div-lista p {
+    margin: 10px 0; /* 10px de margen superior e inferior y 0 de margen izquierdo y derecho */
+    font-size: 1em; /* 1em de tamaño */
+    color : #000000; /* color de los p */
+}
+
+hr {
+    width: 100%; /* ancho del hr */
+    height: 1px; /* altura del hr */
+}
+
+/* estilos de los botones */
+.boton {
+    padding: 5px 10px;
+    border: none;
+    margin: 0 5px;
+    color: white;
+    border-radius: 50px;
+}
+
+.boton-editar {
+    background-color: #313C80;
+}
+
+.boton-eliminar {
+    background-color: #9B0000;
+}
+
