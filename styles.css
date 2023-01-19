@@ -1,4 +1,3 @@
-
 * {
     margin: 0; /* para que no haya margen en el body */
     padding: 0; /* para que no haya margen en el body */
@@ -19,11 +18,12 @@ body {
 
 .div-titulo h1 {
     font-weight: 300; /* 300 de grosor */
+    font-size: 3em; /* 3em de tamaño de fuente*/
 }
 
 .contenedor {
     width: 100%; /* ancho del contenedor */
-    height: calc(100vh - 100px); /* altura del contenedor */
+    height: auto; /* cambiar la altura automaticamente mientras se va agregando o quitando elementos */
     display: flex; /* para que el contenedor se centre */
     justify-content: center; /* para que el contenedor se centre */
 }
@@ -39,8 +39,8 @@ body {
     justify-content: center; /* para que el div-contenedor se centre */
     align-items: center; /* formulario se centre */
     border-radius: 10px; /* se le da un borde redondeado */
-    /*box-shadow: 10px 10px 10px #000000; /* se le da una sombra */
-    /*box-shadow: 10px 10px rgba(0, 0, 0, 0.3); /* se le da una sombra */
+    /*box-shadow: 10px 10px 10px #000000; /* se le da sombra */
+    /*box-shadow: 10px 10px rgba(0, 0, 0, 0.3); /* se le da sombra */
 
 }
 
@@ -132,4 +132,5 @@ hr {
 .boton-eliminar {
     background-color: #9B0000;
 }
+
 
