@@ -1,6 +1,6 @@
 let listaElemento = []; // arreglo de objetos
 
-// objeto que se va a agregar al arreglo
+// objeto plantilla que se va a agregar al arreglo
 const objetoElemento = {
     id: '',
     nombre: '',
@@ -16,13 +16,14 @@ const nombreInput = document.querySelector('#nombre');
 const puestoInput = document.querySelector('#puesto');
 const botonAgregarInput = document.querySelector('#botonAgregar');
 
-// agregar evento al boton 
+// agregar evento al boton agregar "Add"
 formulario.addEventListener('submit', validarFormulario);
 
 function validarFormulario(e) {
     e.preventDefault(); // para que no se recargue la pagina
 
-    // validar que los campos no esten vacios 
+    // validar que los campos no esten vacios
+    // si estan vacios se muestra una alerta
     if(nombreInput.value === '' || puestoInput.value === '') {
         alert('Todos los campos se deben llenar');
         return;
@@ -62,18 +63,19 @@ function mostrarElemento() {
     // se limpia el HTML
     limpiarHTML();
 
-    // se recorre el arreglo y se crea el HTML
+    // se selecciona el elemento donde se va a mostrar la lista
     const divElementos = document.querySelector('.div-lista');
     
     // forEach recorre el arreglo y crea un elemento por cada objeto
     listaElemento.forEach(elemento => {
+        // se desestructura el objeto para obtener los datos
         const {id, nombre, puesto} = elemento;
 
         const parrafo = document.createElement('p'); // se crea el elemento
         parrafo.textContent = `${id} - ${nombre} - ${puesto} - `; // se le agrega el contenido
-        parrafo.dataset.id = id; // se le agrega el id al elemento
+        parrafo.dataset.id = id; // se le agrega el id al elemento para poder eliminarlo
 
-        const editarBoton = document.createElement('button'); // se crea el boton
+        const editarBoton = document.createElement('button'); // se crea el boton para editar
         editarBoton.onclick = () => cargarElemento(elemento); // se le agrega la funcion al boton
         editarBoton.textContent = 'Edit'; // se le agrega el texto al boton
         editarBoton.classList.add('boton', 'boton-editar'); // se le agrega las clases al boton
@@ -94,6 +96,7 @@ function mostrarElemento() {
 
 function cargarElemento(elemento) {
     // se cargan los datos del elemento al formulario
+    // se desestructura el objeto para obtener los datos
     const {id, nombre, puesto} = elemento;
 
     // se cargan los datos al formulario
@@ -106,7 +109,7 @@ function cargarElemento(elemento) {
     // se cambia el texto del boton
     formulario.querySelector('button[type="submit"]').textContent = 'Update';
     
-    // se cambia el valor de la variable
+    // se cambia el valor de la variable editando
     editando = true;
 }
 
